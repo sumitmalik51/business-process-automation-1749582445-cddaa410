@@ -147,7 +147,7 @@ export default function Result(props) {
     }
 
     const originalUrl = () => {
-        if(props.data.filename.includes(".txt") && props.data.filename.includes("-stage1")){
+        if(props.data?.filename && typeof props.data.filename === 'string' && props.data.filename.includes(".txt") && props.data.filename.includes("-stage1")){
            
             const stringsplit = props.data?.filename.split('/')
             let result = ''
