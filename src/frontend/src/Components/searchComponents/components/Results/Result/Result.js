@@ -114,7 +114,7 @@ export default function Result(props) {
                 </div>   
                 </>
             )
-        } else if(data?.filename.includes(".txt") && data?.filename.includes("-stage1")){
+        } else if(data?.filename && typeof data.filename === 'string' && data.filename.includes(".txt") && data.filename.includes("-stage1")){
            
             const stringsplit = data?.filename.split('/')
             let result = ''
